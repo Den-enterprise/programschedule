@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program Status Tracker</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  .program-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .program-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .highlight {
+    background-color: #3498db;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Program Status Tracker</h1>
+  <ul class="program-list">
+    <li class="program-item">09:00 AM - Welcome Speech</li>
+    <li class="program-item">09:30 AM - Dance Performance</li>
+    <li class="program-item">10:00 AM - Music Concert</li>
+    <li class="program-item">10:30 AM - Drama Skit</li>
+    <li class="program-item">11:00 AM - Award Ceremony</li>
+    <li class="program-item">05:50 PM - Fun Activity</li>
+    <li class="program-item">06:30 PM - Dinner</li>
+  </ul>
+</div>
+
+<script>
+  // Get the current time
+  var currentTime = new Date();
+  var currentHours = currentTime.getHours();
+  var currentMinutes = currentTime.getMinutes();
+  var currentTimeString = currentHours + ":" + currentMinutes;
+
+  // Check if the current time is within the specified range (5:00 PM - 6:00 PM)
+  var startTime = "17:00";
+  var endTime = "18:00";
+
+  // Find the program item to highlight
+  var programItems = document.querySelectorAll('.program-item');
+  programItems.forEach(function(item) {
+    var programTime = item.textContent.split('-')[0].trim();
+    if (programTime >= startTime && programTime <= endTime) {
+      item.classList.add('highlight');
+    }
+  });
+</script>
+</body>
+</html>
