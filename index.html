@@ -1,162 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Program Status Tracker</title>
-<style>
-.feedback-button:hover {
-  background-color: #2980b9;
-}
-.button-container {
-  text-align: center;
-}
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
 
-  .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-
-  .program-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .program-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .highlight {
-    background-color: #3498db;
-    color: #fff;
-  }
-</style>
+        iframe {
+            width: 100%;
+            height: 600px; /* You can adjust the height as per your preference */
+            border: none;
+        }
+    </style>
 </head>
 <body>
-<div class="button-container">
-  <a href="Feedback.html" class="feedback-button">Feedback</a>
-</div>
-
-<div class="container">
-  <h1>Program Status Tracker</h1>
-  <ul class="program-list">
-    <li class="program-item">9:30-9.35 AM Welcome Speech</li>
-    <li class="program-item">9:35-9:40 AM - Lighting the lamp</li>
-    <li class="program-item">9:40-9:50 AM - HOS Message</li>
-    <li class="program-item">10:00-10:30 AM - Prize distribution</li>
-    <li class="program-item">10:33-10:38 AM - Welcome Dance </li>
-<hr>
-    <li class="program-item">10:42-10:50 AM - HULA DANCE </li>
-
-    <li class="program-item">10:55-11:00 AM - CHEERLEADING DANCE  </li>
-
-    <li class="program-item">11:05-11:10 AM - BEACH DANCE </li>
-
-    <li class="program-item">11:15-11:20 AM - CHARLSTON DANCE  </li>
-
-    <li class="program-item">11:22-11:27 AM - HIP HOP DANCE  </li>
-
-    <li class="program-item">11:32-11:36 AM - COWBOY DANCE </li>
-
-    <li class="program-item">11:39-11:45 AM - CONTEMPORARY JAZZ </li>
-<hr>
-	<li class="program-item">11:50-11:52 AM - Spain intro and Narration of Traditional Spanish Dance</li>
-	<li class="program-item">11:52-11:56 AM - Traditional Spanish Dance</li>
-	<li class="program-item">11:58-12:00 PM- Narration of Flamenco Dance</li>
-	<li class="program-item">12:00-12:06 PM - Flamenco Dance</li>
-	<li class="program-item">12:07-12:08 PM - Compering About Africa </li>
-	<li class="program-item">12:08-12:10 PM - Africa intro and African Hip hop narration</li>
-	<li class="program-item">12:10-12:15 PM - African Hip Hop</li>
-	<li class="program-item">12:17-12:19 PM- Narration of Sinte Dance  </li>
-	<li class="program-item">12:19-12:25 PM - Sinte West African Dance</li>
-	<li class="program-item">12:27-12:29 PM - Narration of Tribal dance</li>
-	<li class="program-item">12:29-12:35 PM - Tribal Dance</li>
-	<li class="program-item">12.38-12.40 PM - Compering about India </li>
-	<li class="program-item">12.40-12.44 PM - India intro </li>
-	<li class="program-item">12.44-12.46 PM- Narration of Kashmiri Dance </li>
-	<li class="program-item">12.46-12.52 PM - KASHMIRI DANCE</li>
-	<li class="program-item">12.52-12.54 PM- Narration of Rajasthani Dance </li>
-	<li class="program-item">12.54-12.59 PM - RAJASTANI DANCE</li>
-	<li class="program-item">12.59-1.01 PM- Narration of Tamil Folk </li>
-	<li class="program-item">1.01-1.05 PM - TAMIL FOLK</li>
-	<li class="program-item">1.05-1.07 PM - Narration of Sambalpuri Dance </li>
-	<li class="program-item">1.07-1.12 PM - SAMBALPURI DANCE </li>
-	<li class="program-item">1.12-1.14 PM - Narration of Punjabi Dance </li>
-	<li class="program-item">1.14-1.18 PM - PUNJABI DANCE </li>
-	<li class="program-item">1.18-1.20 PM - Narration of  Kerala Dance </li>
-	<li class="program-item">1.20-1.28 PM- KERALA DANCE </li>
-	<li class="program-item">1.28-1.30 PM- Vote of Thanks</li>
-	
-	
-	
-	
-  </ul>
-</div>
-
-<script>
- window.onload = function() {
-    alert("Note: All timings shown on this page are approximate and might not be correct.");
-  };
-  // Get the current time
-  var currentTime = new Date();
-  var currentHours = currentTime.getHours();
-  var currentMinutes = currentTime.getMinutes();
-  var currentTimeString = currentHours + ":" + (currentMinutes < 10 ? "0" + currentMinutes : currentMinutes); // Format minutes with leading zero if needed
-
-  // Convert current time into a comparable format
-  var currentDateTime = new Date();
-  currentDateTime.setHours(currentHours);
-  currentDateTime.setMinutes(currentMinutes);
-
-  // Check if the current time is within the specified range (5:00 PM - 6:00 PM)
-  var startTime = "17:00";
-  var endTime = "18:00";
-
-  // Convert start and end time strings into comparable formats
-  var startDate = new Date();
-  var startParts = startTime.split(':');
-  startDate.setHours(parseInt(startParts[0], 10));
-  startDate.setMinutes(parseInt(startParts[1], 10));
-
-  var endDate = new Date();
-  var endParts = endTime.split(':');
-  endDate.setHours(parseInt(endParts[0], 10));
-  endDate.setMinutes(parseInt(endParts[1], 10));
-
-  // Find the program item to highlight
-  var programItems = document.querySelectorAll('.program-item');
-  programItems.forEach(function(item) {
-    var programTime = item.textContent.split('-')[0].trim();
-
-    // Convert program item time into a comparable format
-    var programDateTime = new Date();
-    var programParts = programTime.split(':');
-    programDateTime.setHours(parseInt(programParts[0], 10));
-    programDateTime.setMinutes(parseInt(programParts[1], 10));
-
-    // Compare current time with program item time
-    if (programDateTime >= startDate && programDateTime <= endDate) {
-      item.classList.add('highlight');
-    }
-  });
-</script>
-
-</script>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <p>We appreciate your feedback. Please take a moment to fill out the form below:</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSexK4rheXJJ7jqlp2pljK90dOHIU6fbmDLpgx6jPIv4Bh2F1w/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
 </body>
 </html>
