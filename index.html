@@ -3,161 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Program Status Tracker</title>
+<title>Loading Page</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap">
 <style>
   body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
+    background-color: #f3be10; /* Blue background */
+    font-family: 'Comic Neue', cursive; /* Fun font */
   }
 
-  .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  h1 {
+  #loading {
     text-align: center;
-    color: #333;
+    color: white; /* White text */
   }
 
-  .program-list {
-    list-style: none;
-    padding: 0;
+  #loading img {
+    width: 200px;
+    
   }
 
-  .program-item {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+  #status {
+    margin-top: 20px;
+    font-size: 30px;
   }
-
-  .highlight {
-    background-color: #3498db;
-    color: #fff;
-  }
-.feedback-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #3498db;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.feedback-button:hover {
-  background-color: #2980b9;
-}
-.button-container {
-  text-align: center;
-}
-
 </style>
 </head>
-<div class="button-container">
-  <a href="Feedback.html" class="feedback-button">Feedback</a>
-</div>
-
 <body>
-<div class="container">
-  <h1>Program Status Tracker</h1>
-  <ul class="program-list">
-    <li class="program-item">04.55-5.00 PM - Welcome Speech</li>
-    <li class="program-item">05:00-5.05 PM - Lighting the ceremonial lamp</li>
-<li class="program-item">05:50-6.20 PM - Music performance</li>
-    <li class="program-item">05:05-5.20 PM - HOS Message</li>
-        <li class="program-item">05:20-5.45 PM - Prize distribution</li>
-    <li class="program-item">05:45-5.50 PM - Welcome Dance </li>
-    
-    <h1>America</h1>
-    <li class="program-item">06:25-6.30 PM - (01) Cow Boy Dance</li>
-    <li class="program-item">06:30-6.35 PM - (02) Butterfly Ballet </li>
-    <li class="program-item">06:35-6.40 PM - (03) Mexican Hat Dance </li>
-    <li class="program-item">06:40-6.45 PM - (04) American Zumba</li>
-    <li class="program-item">06:45-6.50 PM - (05) Salsa</li>
-    <h1>Middle East</h1>
-    <li class="program-item">06:55-7.00 PM - (06) Arabic Arada Folk Dance</li>
-    <li class="program-item">07:00-7.05 PM - (07) Zumba Dance </li>
-    <li class="program-item">07:05-7.10 PM - (08) Arabic Dance</li>
-    <h1>China</h1>
-    <li class="program-item">7.15-7.20 PM - (09) Chinese Fan Dance </li>
-    <li class="program-item">7.20-7.25 PM - (10) Chinese Umbrella Dance </li>
-    <li class="program-item">7.25-7.30 PM - (11) Dragon Dance</li>
-    <h1>Brazil</h1>
-    <li class="program-item">7.35-7.40 PM - (12) Brazil Dance </li>
-    <li class="program-item">7.40-7.45 PM - (13) Brazilian Folk</li>
-    <li class="program-item">7.45-7.50 PM - (14) Brazilian Wing Dance</li>
-	<li class="program-item">7.50-7:53 PM -  (15) iPlay group song ligher (kg)</li>
-	<li class="program-item">7:53-7:58 PM - (16) iPlay group song Dreamers (1 and 2)</li>
-  <h1>India</h1>
-	<li class="program-item">8-05-8.10 PM - (17) Garba</li>
-	<li class="program-item">8.10-8.15 PM - (18) Kashmiri</li>
-	<li class="program-item">8.15-8.20 PM - (19) Punjabi dance </li>
-	<li class="program-item">8.20-8.25 PM - (20) Mayilattam</li>
-	<li class="program-item">8.25-8.30 PM - (21) Ghoomar </li>
-	<li class="program-item">8.30-8.35 PM - (22) Kaikottikali  </li>
-	<li class="program-item">8.40-8.45 PM - (23) Tamil folk dance</li>
-  <h1>Closing</h1>
-	<li class="program-item">8.45-8.50 PM - Vote of Thanks</li>
-	
-	
-	
-  </ul>
+<div id="loading">
+
+  <img src="load.gif" alt="Loading...">
+  <div id="status">Well Ekam is over, But through GreenValley we will remain in EKAM!</div>
+  
 </div>
-
-<script>
-  window.onload = function() {
-    alert("Note: All timings shown on this page are approximate and might not be correct.");
-  };
-  // Get the current time
-  var currentTime = new Date();
-  var currentHours = currentTime.getHours();
-  var currentMinutes = currentTime.getMinutes();
-  var currentTimeString = currentHours + ":" + (currentMinutes < 10 ? "0" + currentMinutes : currentMinutes); // Format minutes with leading zero if needed
-
-  // Convert current time into a comparable format
-  var currentDateTime = new Date();
-  currentDateTime.setHours(currentHours);
-  currentDateTime.setMinutes(currentMinutes);
-
-  // Check if the current time is within the specified range (5:00 PM - 6:00 PM)
-  var startTime = "17:00";
-  var endTime = "18:00";
-
-  // Convert start and end time strings into comparable formats
-  var startDate = new Date();
-  var startParts = startTime.split(':');
-  startDate.setHours(parseInt(startParts[0], 10));
-  startDate.setMinutes(parseInt(startParts[1], 10));
-
-  var endDate = new Date();
-  var endParts = endTime.split(':');
-  endDate.setHours(parseInt(endParts[0], 10));
-  endDate.setMinutes(parseInt(endParts[1], 10));
-
-  // Find the program item to highlight
-  var programItems = document.querySelectorAll('.program-item');
-  programItems.forEach(function(item) {
-    var programTime = item.textContent.split('-')[0].trim();
-
-    // Convert program item time into a comparable format
-    var programDateTime = new Date();
-    var programParts = programTime.split(':');
-    programDateTime.setHours(parseInt(programParts[0], 10));
-    programDateTime.setMinutes(parseInt(programParts[1], 10));
-
-    // Compare current time with program item time
-    if (programDateTime >= startDate && programDateTime <= endDate) {
-      item.classList.add('highlight');
-    }
-  });
-</script>
-
-</script>
 </body>
 </html>
